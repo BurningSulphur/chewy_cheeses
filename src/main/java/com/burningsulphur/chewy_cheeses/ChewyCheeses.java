@@ -81,17 +81,17 @@ public class ChewyCheeses
     /* ----------------------------------------------notes for adding a new cheese ----------------------------------------------------
 
     register block
-    register item for block
-    add new cheese fluid type
+    register unripe block
+    register item for blocks
+    add new cheese fluid type to cheese fluid
     register fluid
     block states
     block models
     coster model - it is just the corner of cheese to go on a coaster, uses the cheese slice item from the mods
+    fluid item display
     block textures
     recipes
     tags
-    fluid item display list
-    Coaster model item for wedges
 
      ---------------------------------------------------------------------------------------------------------------------------------*/
 
