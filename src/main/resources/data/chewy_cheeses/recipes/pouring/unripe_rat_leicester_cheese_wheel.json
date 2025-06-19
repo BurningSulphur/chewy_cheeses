@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "modid": "rats",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "brewinandchewin:keg_pouring",
+  "amount": 1000,
+  "container": {
+    "item": "minecraft:honeycomb"
+  },
+  "filling": false,
+  "fluid": "chewy_cheeses:rat_leicester_cheese",
+  "output": {
+    "item": "chewy_cheeses:unripe_rat_leicester_cheese_wheel"
+  },
+  "strict": false
+}
