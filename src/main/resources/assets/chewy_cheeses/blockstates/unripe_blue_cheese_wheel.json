@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "chewy_cheeses:block/unripe_blue_cheese_wheel"
+    },
+    "age=1": {
+      "model": "chewy_cheeses:block/semiripe_blue_cheese_wheel"
+    }
+  }
+}

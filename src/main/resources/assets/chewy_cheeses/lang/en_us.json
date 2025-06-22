@@ -1,5 +1,8 @@
 {
   "block.chewy_cheeses.unripe_rat_leicester_cheese_wheel": "Unripe Rat Leicester Cheese Wheel",
   "block.chewy_cheeses.rat_leicester_cheese_wheel": "Rat Leicester Cheese Wheel",
-  "fluid_type.chewy_cheeses.rat_leicester_cheese_type": "Rat Leicester Cheese"
+  "fluid_type.chewy_cheeses.rat_leicester_cheese_type": "Rat Leicester Cheese",
+  "block.chewy_cheeses.unripe_blue_cheese_wheel": "Unripe Blue Cheese Wheel",
+  "block.chewy_cheeses.blue_cheese_wheel": "Blue Cheese Wheel",
+  "fluid_type.chewy_cheeses.blue_cheese_type": "Blue Cheese"
 }

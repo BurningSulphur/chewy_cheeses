@@ -2,5 +2,9 @@
   "chewy_cheeses:rat_leicester_cheese": {
     "id": "chewy_cheeses:unripe_rat_leicester_cheese_wheel",
     "optional": true
+  },
+  "chewy_cheeses:blue_cheese": {
+    "id": "chewy_cheeses:unripe_blue_cheese_wheel",
+    "optional": true
   }
 }
