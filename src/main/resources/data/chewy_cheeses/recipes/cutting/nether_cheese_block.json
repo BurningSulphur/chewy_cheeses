@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "rats:block_of_nether_cheese"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "chewy_cheeses:nether_cheese_wheel"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

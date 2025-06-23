@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "chewy_cheeses:blue_cheese_wheel"
+    }
+  },
+  "pattern": [
+    "C",
+    "C"
+  ],
+  "result": {
+    "item": "rats:block_of_blue_cheese"
+  },
+  "show_notification": true
+}

@@ -97,6 +97,7 @@ public class ChewyCheeses
      ---------------------------------------------------------------------------------------------------------------------------------*/
 
     //rats mod
+    //normal cheese
     public static final RegistryObject<Block> UNRIPE_RAT_LEICESTER_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("unripe_rat_leicester_cheese_wheel", () -> new UnripeCheeseWheelBlock(ChewyCheeses.RAT_LEICESTER_CHEESE_WHEEL , Block.Properties.copy(Blocks.CAKE))) : null;
     public static final RegistryObject<Block> RAT_LEICESTER_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("rat_leicester_cheese_wheel", () -> new CheeseWheelBlock(RatsItemRegistry.CHEESE , Block.Properties.copy(Blocks.CAKE))) : null;
     public static final RegistryObject<Item> UNRIPE_RAT_LEICESTER_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("rats") ? OPTIONAL_ITEMS.register("unripe_rat_leicester_cheese_wheel", () -> new BlockItem(UNRIPE_RAT_LEICESTER_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
@@ -107,8 +108,8 @@ public class ChewyCheeses
     public static final RegistryObject<FlowingFluid> FLOWING_RAT_LEICESTER_CHEESE = FLUIDS.register("flowing_rat_leicester_cheese", () -> new ForgeFlowingFluid.Flowing(ChewyCheeses.RAT_LEICESTER_CHEESE_FLUID_PROPERTIES));
     public static final ForgeFlowingFluid.Properties RAT_LEICESTER_CHEESE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(RAT_LEICESTER_CHEESE_FLUID_TYPE, RAT_LEICESTER_CHEESE, FLOWING_RAT_LEICESTER_CHEESE);
 
-
-    public static final RegistryObject<Block> UNRIPE_BLUE_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("unripe_blue_cheese_wheel", () -> new UnripeCheeseWheelBlock(ChewyCheeses.RAT_LEICESTER_CHEESE_WHEEL , Block.Properties.copy(Blocks.CAKE))) : null;
+// blue cheese
+    public static final RegistryObject<Block> UNRIPE_BLUE_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("unripe_blue_cheese_wheel", () -> new UnripeCheeseWheelBlock(ChewyCheeses.BLUE_CHEESE_WHEEL , Block.Properties.copy(Blocks.CAKE))) : null;
     public static final RegistryObject<Block> BLUE_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("blue_cheese_wheel", () -> new CheeseWheelBlock(RatsItemRegistry.CHEESE , Block.Properties.copy(Blocks.CAKE))) : null;
     public static final RegistryObject<Item> UNRIPE_BLUE_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("rats") ? OPTIONAL_ITEMS.register("unripe_blue_cheese_wheel", () -> new BlockItem(UNRIPE_BLUE_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
     public static final RegistryObject<Item> BLUE_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("rats") ? OPTIONAL_ITEMS.register("blue_cheese_wheel", () -> new BlockItem(BLUE_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
@@ -117,6 +118,17 @@ public class ChewyCheeses
     public static final RegistryObject<FlowingFluid> BLUE_CHEESE = FLUIDS.register("blue_cheese", () -> new ForgeFlowingFluid.Source(ChewyCheeses.BLUE_CHEESE_FLUID_PROPERTIES));
     public static final RegistryObject<FlowingFluid> FLOWING_BLUE_CHEESE = FLUIDS.register("flowing_blue_cheese", () -> new ForgeFlowingFluid.Flowing(ChewyCheeses.BLUE_CHEESE_FLUID_PROPERTIES));
     public static final ForgeFlowingFluid.Properties BLUE_CHEESE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(BLUE_CHEESE_FLUID_TYPE, BLUE_CHEESE, FLOWING_BLUE_CHEESE);
+
+    // nether cheese
+    public static final RegistryObject<Block> UNRIPE_NETHER_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("unripe_nether_cheese_wheel", () -> new UnripeCheeseWheelBlock(ChewyCheeses.NETHER_CHEESE_WHEEL , Block.Properties.copy(Blocks.CAKE))) : null;
+    public static final RegistryObject<Block> NETHER_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("nether_cheese_wheel", () -> new CheeseWheelBlock(RatsItemRegistry.CHEESE , Block.Properties.copy(Blocks.CAKE))) : null;
+    public static final RegistryObject<Item> UNRIPE_NETHER_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("rats") ? OPTIONAL_ITEMS.register("unripe_nether_cheese_wheel", () -> new BlockItem(UNRIPE_NETHER_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
+    public static final RegistryObject<Item> NETHER_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("rats") ? OPTIONAL_ITEMS.register("nether_cheese_wheel", () -> new BlockItem(NETHER_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
+
+    public static final RegistryObject<FluidType> NETHER_CHEESE_FLUID_TYPE = FLUID_TYPES.register("nether_cheese_type", () -> new CheeseFluid("nether"));
+    public static final RegistryObject<FlowingFluid> NETHER_CHEESE = FLUIDS.register("nether_cheese", () -> new ForgeFlowingFluid.Source(ChewyCheeses.NETHER_CHEESE_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_NETHER_CHEESE = FLUIDS.register("flowing_nether_cheese", () -> new ForgeFlowingFluid.Flowing(ChewyCheeses.NETHER_CHEESE_FLUID_PROPERTIES));
+    public static final ForgeFlowingFluid.Properties NETHER_CHEESE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(NETHER_CHEESE_FLUID_TYPE, NETHER_CHEESE, FLOWING_NETHER_CHEESE);
 
 
 
@@ -168,6 +180,12 @@ public class ChewyCheeses
         }
         if (BLUE_CHEESE_WHEEL_ITEM != null && event.getTab() == CHEWY_CHEESES_TAB.get()) {
             event.accept(BLUE_CHEESE_WHEEL_ITEM.get());
+        }
+        if (UNRIPE_NETHER_CHEESE_WHEEL_ITEM != null && event.getTab() == CHEWY_CHEESES_TAB.get()) {
+            event.accept(UNRIPE_NETHER_CHEESE_WHEEL_ITEM.get());
+        }
+        if (NETHER_CHEESE_WHEEL_ITEM != null && event.getTab() == CHEWY_CHEESES_TAB.get()) {
+            event.accept(NETHER_CHEESE_WHEEL_ITEM.get());
         }
     }
 

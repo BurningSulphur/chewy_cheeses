@@ -1,0 +1,10 @@
+{
+	"parent": "brewinandchewin:block/cheese_wheel_template2",
+	"textures": {
+		"top": "chewy_cheeses:block/nether_cheese_wheel_top",
+		"side": "chewy_cheeses:block/nether_cheese_wheel_side",
+		"inside": "chewy_cheeses:block/nether_cheese_wheel_inside",
+		"bottom": "chewy_cheeses:block/nether_cheese_wheel_bottom",
+		"particle": "chewy_cheeses:block/nether_cheese_wheel_top"
+	}
+}

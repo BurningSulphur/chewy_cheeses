@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "chewy_cheeses:blue_cheese_wheel"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "rats:blue_cheese"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

@@ -17,6 +17,8 @@ public class CheeseFluid  extends FluidType {
     public static final ResourceLocation RAT_LEICESTER_FLOWING_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/rat_leicester_cheese_flow");
     public static final ResourceLocation BLUE_STILL_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/blue_cheese_still");
     public static final ResourceLocation BLUE_FLOWING_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/blue_cheese_flow");
+    public static final ResourceLocation NETHER_STILL_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/nether_cheese_still");
+    public static final ResourceLocation NETHER_FLOWING_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/nether_cheese_flow");
     String type;
     public CheeseFluid(String type) {
         super(FluidType.Properties.create()
@@ -40,6 +42,9 @@ public class CheeseFluid  extends FluidType {
                 if (Objects.equals("blue", type) ) {
                     return BLUE_STILL_TEXTURE;
                 }
+                if (Objects.equals("nether", type) ) {
+                    return NETHER_STILL_TEXTURE;
+                }
                 else {
                     return null;
                 }
@@ -53,7 +58,10 @@ public class CheeseFluid  extends FluidType {
                 }
                 if (Objects.equals("blue", type) ) {
                 return BLUE_FLOWING_TEXTURE;
-            }
+                }
+                if (Objects.equals("nether", type) ) {
+                    return NETHER_FLOWING_TEXTURE;
+                }
                 else {
                     return null;
                 }

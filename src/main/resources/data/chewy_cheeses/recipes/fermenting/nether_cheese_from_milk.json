@@ -1,0 +1,35 @@
+{
+  "conditions": [
+    {
+      "modid": "rats",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "brewinandchewin:fermenting",
+  "basefluid": {
+    "count": 1000,
+    "fluid": "minecraft:milk"
+  },
+  "experience": 1.0,
+  "fermentingtime": 9600,
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "rats:contaminated_food"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1000,
+    "fluid": "chewy_cheeses:nether_cheese"
+  },
+  "temperature": 5
+}

@@ -6,5 +6,9 @@
   "chewy_cheeses:blue_cheese": {
     "id": "chewy_cheeses:unripe_blue_cheese_wheel",
     "optional": true
+  },
+  "chewy_cheeses:nether_cheese": {
+    "id": "chewy_cheeses:unripe_nether_cheese_wheel",
+    "optional": true
   }
 }
