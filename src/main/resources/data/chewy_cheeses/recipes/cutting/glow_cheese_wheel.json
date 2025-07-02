@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "modid": "netherexp",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "chewy_cheeses:glow_cheese_wheel"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "netherexp:glowcheese"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

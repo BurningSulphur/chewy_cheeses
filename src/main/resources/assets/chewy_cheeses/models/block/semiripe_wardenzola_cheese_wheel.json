@@ -1,0 +1,9 @@
+{
+	"parent": "brewinandchewin:block/cheese_wheel_template",
+	"textures": {
+		"top": "chewy_cheeses:block/semiripe_wardenzola_cheese_wheel_top",
+		"side": "chewy_cheeses:block/semiripe_wardenzola_cheese_wheel_side",
+		"bottom": "chewy_cheeses:block/semiripe_wardenzola_cheese_wheel_bottom",
+		"particle": "chewy_cheeses:block/semiripe_wardenzola_cheese_wheel_top"
+	}
+}

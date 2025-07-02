@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "modid": "netherexp",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "brewinandchewin:keg_pouring",
+  "amount": 1000,
+  "container": {
+    "item": "minecraft:honeycomb"
+  },
+  "filling": false,
+  "fluid": "chewy_cheeses:glow_cheese",
+  "output": {
+    "item": "chewy_cheeses:unripe_glow_cheese_wheel"
+  },
+  "strict": false
+}

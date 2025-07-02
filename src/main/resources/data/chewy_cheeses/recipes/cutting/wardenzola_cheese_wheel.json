@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "modid": "dungeonsdelight",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "chewy_cheeses:wardenzola_cheese_wheel"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "dungeonsdelight:wardenzola_crumbles"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

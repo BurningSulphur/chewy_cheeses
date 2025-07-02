@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "modid": "dungeonsdelight",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "brewinandchewin:keg_pouring",
+  "amount": 1000,
+  "container": {
+    "item": "minecraft:honeycomb"
+  },
+  "filling": false,
+  "fluid": "chewy_cheeses:wardenzola_cheese",
+  "output": {
+    "item": "chewy_cheeses:unripe_wardenzola_cheese_wheel"
+  },
+  "strict": false
+}
