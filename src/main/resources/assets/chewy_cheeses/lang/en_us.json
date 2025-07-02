@@ -1,4 +1,5 @@
 {
+  "item_group.chewy_cheeses.tab": "Chewy Cheeses",
   "block.chewy_cheeses.unripe_rat_leicester_cheese_wheel": "Unripe Rat Leicester Cheese Wheel",
   "block.chewy_cheeses.rat_leicester_cheese_wheel": "Rat Leicester Cheese Wheel",
   "fluid_type.chewy_cheeses.rat_leicester_cheese_type": "Rat Leicester Cheese",
@@ -8,5 +9,10 @@
   "block.chewy_cheeses.unripe_nether_cheese_wheel": "Unripe Nether Cheese Wheel",
   "block.chewy_cheeses.nether_cheese_wheel": "Nether Cheese Wheel",
   "fluid_type.chewy_cheeses.nether_cheese_type": "Nether Cheese",
-  "item_group.chewy_cheeses.tab": "Chewy Cheeses"
+  "block.chewy_cheeses.unripe_glow_cheese_wheel": "Unripe Glow Cheese Wheel",
+  "block.chewy_cheeses.glow_cheese_wheel": "Glow Cheese Wheel",
+  "fluid_type.chewy_cheeses.glow_cheese_type": "Glow Cheese",
+  "block.chewy_cheeses.unripe_wardenzola_cheese_wheel": "Unripe Wardenzola Cheese Wheel",
+  "block.chewy_cheeses.wardenzola_cheese_wheel": "Wardenzola Cheese Wheel",
+  "fluid_type.chewy_cheeses.wardenzola_cheese_type": "Wardenzola"
 }

@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "modid": "rats",
+      "type": "forge:mod_loaded"
+    }
+  ],
   "type": "farmersdelight:cutting",
   "ingredients": [
     {

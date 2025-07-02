@@ -19,6 +19,13 @@ public class CheeseFluid  extends FluidType {
     public static final ResourceLocation BLUE_FLOWING_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/blue_cheese_flow");
     public static final ResourceLocation NETHER_STILL_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/nether_cheese_still");
     public static final ResourceLocation NETHER_FLOWING_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/nether_cheese_flow");
+
+    public static final ResourceLocation GLOW_STILL_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/glow_cheese_still");
+    public static final ResourceLocation GLOW_FLOWING_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/glow_cheese_flow");
+
+    public static final ResourceLocation WARDENZOLA_STILL_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/wardenzola_cheese_still");
+    public static final ResourceLocation WARDENZOLA_FLOWING_TEXTURE = new ResourceLocation(ChewyCheeses.MOD_ID, "block/wardenzola_cheese_flow");
+
     String type;
     public CheeseFluid(String type) {
         super(FluidType.Properties.create()
@@ -45,6 +52,15 @@ public class CheeseFluid  extends FluidType {
                 if (Objects.equals("nether", type) ) {
                     return NETHER_STILL_TEXTURE;
                 }
+
+                if (Objects.equals("glow", type) ) {
+                    return GLOW_STILL_TEXTURE;
+                }
+                if (Objects.equals("wardenzola", type) ) {
+                    return WARDENZOLA_STILL_TEXTURE;
+                }
+
+
                 else {
                     return null;
                 }
@@ -62,6 +78,14 @@ public class CheeseFluid  extends FluidType {
                 if (Objects.equals("nether", type) ) {
                     return NETHER_FLOWING_TEXTURE;
                 }
+
+                if (Objects.equals("glow", type) ) {
+                    return GLOW_FLOWING_TEXTURE;
+                }
+                if (Objects.equals("wardenzola", type) ) {
+                return WARDENZOLA_FLOWING_TEXTURE;
+                }
+
                 else {
                     return null;
                 }

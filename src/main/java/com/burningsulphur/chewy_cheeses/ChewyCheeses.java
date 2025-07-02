@@ -4,10 +4,7 @@ import com.github.alexthe666.rats.registry.RatsItemRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -28,6 +25,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.satisfy.meadow.core.block.CheeseBlock;
+import net.yirmiri.dungeonsdelight.core.registry.DDItems;
 import org.slf4j.Logger;
 
 import umpaz.brewinandchewin.common.block.*;
@@ -49,7 +47,11 @@ import umpaz.brewinandchewin.common.fluid.CheeseFluidType;
 import umpaz.brewinandchewin.common.fluid.HoneyFluidType;
 import umpaz.brewinandchewin.common.fluid.MeadFluidType;
 
+import net.jadenxgamer.netherexp.registry.item.JNEItems;
+
 import static net.satisfy.meadow.core.util.GeneralUtil.registerWithItem;
+import static net.yirmiri.dungeonsdelight.core.registry.DDCreativeTabs.DUNGEONSDELIGHT;
+import net.yirmiri.dungeonsdelight.common.util.DDProperties;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ChewyCheeses.MOD_ID)
@@ -110,7 +112,7 @@ public class ChewyCheeses
 
 // blue cheese
     public static final RegistryObject<Block> UNRIPE_BLUE_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("unripe_blue_cheese_wheel", () -> new UnripeCheeseWheelBlock(ChewyCheeses.BLUE_CHEESE_WHEEL , Block.Properties.copy(Blocks.CAKE))) : null;
-    public static final RegistryObject<Block> BLUE_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("blue_cheese_wheel", () -> new CheeseWheelBlock(RatsItemRegistry.CHEESE , Block.Properties.copy(Blocks.CAKE))) : null;
+    public static final RegistryObject<Block> BLUE_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("blue_cheese_wheel", () -> new CheeseWheelBlock(RatsItemRegistry.BLUE_CHEESE , Block.Properties.copy(Blocks.CAKE))) : null;
     public static final RegistryObject<Item> UNRIPE_BLUE_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("rats") ? OPTIONAL_ITEMS.register("unripe_blue_cheese_wheel", () -> new BlockItem(UNRIPE_BLUE_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
     public static final RegistryObject<Item> BLUE_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("rats") ? OPTIONAL_ITEMS.register("blue_cheese_wheel", () -> new BlockItem(BLUE_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
 
@@ -121,7 +123,7 @@ public class ChewyCheeses
 
     // nether cheese
     public static final RegistryObject<Block> UNRIPE_NETHER_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("unripe_nether_cheese_wheel", () -> new UnripeCheeseWheelBlock(ChewyCheeses.NETHER_CHEESE_WHEEL , Block.Properties.copy(Blocks.CAKE))) : null;
-    public static final RegistryObject<Block> NETHER_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("nether_cheese_wheel", () -> new CheeseWheelBlock(RatsItemRegistry.CHEESE , Block.Properties.copy(Blocks.CAKE))) : null;
+    public static final RegistryObject<Block> NETHER_CHEESE_WHEEL = ModList.get().isLoaded("rats") ? OPTIONAL_BLOCKS.register("nether_cheese_wheel", () -> new CheeseWheelBlock(RatsItemRegistry.NETHER_CHEESE , Block.Properties.copy(Blocks.CAKE))) : null;
     public static final RegistryObject<Item> UNRIPE_NETHER_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("rats") ? OPTIONAL_ITEMS.register("unripe_nether_cheese_wheel", () -> new BlockItem(UNRIPE_NETHER_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
     public static final RegistryObject<Item> NETHER_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("rats") ? OPTIONAL_ITEMS.register("nether_cheese_wheel", () -> new BlockItem(NETHER_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
 
@@ -130,13 +132,30 @@ public class ChewyCheeses
     public static final RegistryObject<FlowingFluid> FLOWING_NETHER_CHEESE = FLUIDS.register("flowing_nether_cheese", () -> new ForgeFlowingFluid.Flowing(ChewyCheeses.NETHER_CHEESE_FLUID_PROPERTIES));
     public static final ForgeFlowingFluid.Properties NETHER_CHEESE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(NETHER_CHEESE_FLUID_TYPE, NETHER_CHEESE, FLOWING_NETHER_CHEESE);
 
+// jaden's nether expansion
+// glow cheese
 
+    public static final RegistryObject<Block> UNRIPE_GLOW_CHEESE_WHEEL = ModList.get().isLoaded("netherexp") ? OPTIONAL_BLOCKS.register("unripe_glow_cheese_wheel", () -> new UnripeCheeseWheelBlock(ChewyCheeses.GLOW_CHEESE_WHEEL , Block.Properties.copy(Blocks.CAKE).lightLevel((p_152607_) -> 10))) : null;
+    public static final RegistryObject<Block> GLOW_CHEESE_WHEEL = ModList.get().isLoaded("netherexp") ? OPTIONAL_BLOCKS.register("glow_cheese_wheel", () -> new CheeseWheelBlock(JNEItems.GLOWCHEESE , Block.Properties.copy(Blocks.CAKE).lightLevel((p_152607_) -> 15))) : null;
+    public static final RegistryObject<Item> UNRIPE_GLOW_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("netherexp") ? OPTIONAL_ITEMS.register("unripe_glow_cheese_wheel", () -> new BlockItem(UNRIPE_GLOW_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
+    public static final RegistryObject<Item> GLOW_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("netherexp") ? OPTIONAL_ITEMS.register("glow_cheese_wheel", () -> new BlockItem(GLOW_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16))): null;
 
-    //public static final RegistryObject<Block> UNRIPE_RAT_LEICESTER_CHEESE_WHEEL = BLOCKS.register("unripe_rat_leicester_cheese_wheel", () -> new UnripeCheeseWheelBlock(ChewyCheeses.RAT_LEICESTER_CHEESE_WHEEL , Block.Properties.copy(Blocks.CAKE)));
-    //public static final RegistryObject<Block> RAT_LEICESTER_CHEESE_WHEEL = BLOCKS.register("rat_leicester_cheese_wheel", () -> new CheeseWheelBlock(RatsItemRegistry.CHEESE , Block.Properties.copy(Blocks.CAKE)));
-    //public static final RegistryObject<Item> UNRIPE_RAT_LEICESTER_CHEESE_WHEEL_ITEM = ITEMS.register("unripe_amethyst_cheese_wheel", () -> new BlockItem(UNRIPE_RAT_LEICESTER_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16)));
-    //public static final RegistryObject<Item> RAT_LEICESTER_CHEESE_WHEEL_ITEM = ITEMS.register("test_amethyst_cheese_wheel", () -> new BlockItem(RAT_LEICESTER_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<FluidType> GLOW_CHEESE_FLUID_TYPE = FLUID_TYPES.register("glow_cheese_type", () -> new CheeseFluid("glow"));
+    public static final RegistryObject<FlowingFluid> GLOW_CHEESE = FLUIDS.register("glow_cheese", () -> new ForgeFlowingFluid.Source(ChewyCheeses.GLOW_CHEESE_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_GLOW_CHEESE = FLUIDS.register("flowing_glow_cheese", () -> new ForgeFlowingFluid.Flowing(ChewyCheeses.GLOW_CHEESE_FLUID_PROPERTIES));
+    public static final ForgeFlowingFluid.Properties GLOW_CHEESE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(GLOW_CHEESE_FLUID_TYPE, GLOW_CHEESE, FLOWING_GLOW_CHEESE);
 
+// dungeons delight
+
+    public static final RegistryObject<Block> UNRIPE_WARDENZOLA_CHEESE_WHEEL = ModList.get().isLoaded("dungeonsdelight") ? OPTIONAL_BLOCKS.register("unripe_wardenzola_cheese_wheel", () -> new UnripeCheeseWheelBlock(ChewyCheeses.WARDENZOLA_CHEESE_WHEEL , Block.Properties.copy(Blocks.CAKE))) : null;
+    public static final RegistryObject<Block> WARDENZOLA_CHEESE_WHEEL = ModList.get().isLoaded("dungeonsdelight") ? OPTIONAL_BLOCKS.register("wardenzola_cheese_wheel", () -> new CheeseWheelBlock(DDItems.WARDENZOLA_CRUMBLES, Block.Properties.copy(Blocks.CAKE))) : null;
+    public static final RegistryObject<Item> UNRIPE_WARDENZOLA_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("dungeonsdelight") ? OPTIONAL_ITEMS.register("unripe_wardenzola_cheese_wheel", () -> new BlockItem(UNRIPE_WARDENZOLA_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16).rarity(DDProperties.MONSTER))): null;
+    public static final RegistryObject<Item> WARDENZOLA_CHEESE_WHEEL_ITEM = ModList.get().isLoaded("dungeonsdelight") ? OPTIONAL_ITEMS.register("wardenzola_cheese_wheel", () -> new BlockItem(WARDENZOLA_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16).rarity(DDProperties.MONSTER))): null;
+
+    public static final RegistryObject<FluidType> WARDENZOLA_CHEESE_FLUID_TYPE = FLUID_TYPES.register("wardenzola_cheese_type", () -> new CheeseFluid("wardenzola"));
+    public static final RegistryObject<FlowingFluid> WARDENZOLA_CHEESE = FLUIDS.register("wardenzola_cheese", () -> new ForgeFlowingFluid.Source(ChewyCheeses.WARDENZOLA_CHEESE_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_WARDENZOLA_CHEESE = FLUIDS.register("flowing_wardenzola_cheese", () -> new ForgeFlowingFluid.Flowing(ChewyCheeses.WARDENZOLA_CHEESE_FLUID_PROPERTIES));
+    public static final ForgeFlowingFluid.Properties WARDENZOLA_CHEESE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(WARDENZOLA_CHEESE_FLUID_TYPE, WARDENZOLA_CHEESE, FLOWING_WARDENZOLA_CHEESE);
 
 
 
@@ -186,6 +205,28 @@ public class ChewyCheeses
         }
         if (NETHER_CHEESE_WHEEL_ITEM != null && event.getTab() == CHEWY_CHEESES_TAB.get()) {
             event.accept(NETHER_CHEESE_WHEEL_ITEM.get());
+        }
+        if (UNRIPE_GLOW_CHEESE_WHEEL_ITEM != null && event.getTab() == CHEWY_CHEESES_TAB.get()) {
+            event.accept(UNRIPE_GLOW_CHEESE_WHEEL_ITEM.get());
+        }
+        if (GLOW_CHEESE_WHEEL_ITEM != null && event.getTab() == CHEWY_CHEESES_TAB.get()) {
+            event.accept(GLOW_CHEESE_WHEEL_ITEM.get());
+        }
+        if (UNRIPE_WARDENZOLA_CHEESE_WHEEL_ITEM != null && event.getTab() == CHEWY_CHEESES_TAB.get()) {
+        event.accept(UNRIPE_WARDENZOLA_CHEESE_WHEEL_ITEM.get());
+        }
+        if (WARDENZOLA_CHEESE_WHEEL_ITEM != null && event.getTab() == CHEWY_CHEESES_TAB.get()) {
+            event.accept(WARDENZOLA_CHEESE_WHEEL_ITEM.get());
+        }
+        //removing and adding it to their tab
+        if (WARDENZOLA_CHEESE_WHEEL_ITEM != null){ // a way of testing if the mod is actually installed
+            event.getEntries().remove(DDItems.WARDENZOLA.get().getDefaultInstance());
+        }
+        if (UNRIPE_WARDENZOLA_CHEESE_WHEEL_ITEM != null && event.getTab() == DUNGEONSDELIGHT.get()) {
+            event.accept(UNRIPE_WARDENZOLA_CHEESE_WHEEL_ITEM.get());
+        }
+        if (WARDENZOLA_CHEESE_WHEEL_ITEM != null && event.getTab() == DUNGEONSDELIGHT.get()) {
+            event.accept(WARDENZOLA_CHEESE_WHEEL_ITEM.get());
         }
     }
 

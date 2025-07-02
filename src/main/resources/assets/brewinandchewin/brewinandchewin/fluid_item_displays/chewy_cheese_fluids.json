@@ -10,5 +10,13 @@
   "chewy_cheeses:nether_cheese": {
     "id": "chewy_cheeses:unripe_nether_cheese_wheel",
     "optional": true
+  },
+  "chewy_cheeses:glow_cheese": {
+    "id": "chewy_cheeses:unripe_glow_cheese_wheel",
+    "optional": true
+  },
+  "chewy_cheeses:wardenzola_cheese": {
+    "id": "chewy_cheeses:unripe_wardenzola_cheese_wheel",
+    "optional": true
   }
 }
